@@ -1,0 +1,28 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aware.plugin.iotester">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application android:allowBackup="true" android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher"
+        android:theme="@style/Theme.Aware">
+
+
+        <service android:name="com.aware.plugin.iotester.Plugin" android:exported="true" />
+        <activity android:name="com.aware.plugin.iotester.Settings" android:exported="true" android:theme="@style/Theme.Aware" />
+
+        <provider
+            android:name="com.aware.plugin.iotester.Provider"
+            android:authorities="com.aware.plugin.iotester.provider.general_data"
+            android:enabled="true"
+            android:exported="true"
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
+            android:readPermission="com.aware.READ_CONTEXT_DATA"/>
+
+    </application>
+
+</manifest>

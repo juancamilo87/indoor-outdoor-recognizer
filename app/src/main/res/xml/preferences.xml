@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="status_plugin_template"
+        android:defaultValue="false"
+        android:persistent="true"
+        android:summary="Activate/Deactivate template plugin" />
+    <Preference
+        android:key="location"
+        android:defaultValue="Unknown"
+        android:persistent="true"
+        android:selectable="false"
+        />
+    <Preference
+        android:key="wifiStatus"
+        android:defaultValue="false"
+        android:persistent="false"
+        android:selectable="false"
+        />
+    <Preference
+        android:key="location_type"
+        android:defaultValue="Unknown"
+        android:persistent="false"
+        android:selectable="false"
+        />
+
+</PreferenceScreen>
